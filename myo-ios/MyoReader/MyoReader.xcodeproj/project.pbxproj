@@ -14,7 +14,7 @@
 		BBDC07541D33084E008171E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBDC07521D33084E008171E6 /* LaunchScreen.storyboard */; };
 		BBDC075F1D330C0B008171E6 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDC075E1D330C0B008171E6 /* CoreBluetooth.framework */; };
 		BBDC07611D330C18008171E6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDC07601D330C18008171E6 /* SystemConfiguration.framework */; };
-		BBDC07631D330CD5008171E6 /* MyoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDC07621D330CD5008171E6 /* MyoKit.framework */; };
+		BBDC07691D331234008171E6 /* MyoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDC07681D331234008171E6 /* MyoKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,10 +25,10 @@
 		BBDC07501D33084E008171E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBDC07531D33084E008171E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BBDC07551D33084E008171E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BBDC075B1D3309A7008171E6 /* MyoReader-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyoReader-Bridging-Header.h"; sourceTree = "<group>"; };
 		BBDC075E1D330C0B008171E6 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		BBDC07601D330C18008171E6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		BBDC07621D330CD5008171E6 /* MyoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MyoKit.framework; path = "../Myo-iOS-SDK-0.5.2/MyoKit.framework"; sourceTree = "<group>"; };
+		BBDC07681D331234008171E6 /* MyoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MyoKit.framework; sourceTree = "<group>"; };
+		BBDC076A1D33133B008171E6 /* MyoKit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyoKit-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,7 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBDC07631D330CD5008171E6 /* MyoKit.framework in Frameworks */,
+				BBDC07691D331234008171E6 /* MyoKit.framework in Frameworks */,
 				BBDC07611D330C18008171E6 /* SystemConfiguration.framework in Frameworks */,
 				BBDC075F1D330C0B008171E6 /* CoreBluetooth.framework in Frameworks */,
 			);
@@ -48,7 +48,7 @@
 		BBDC073D1D33084E008171E6 = {
 			isa = PBXGroup;
 			children = (
-				BBDC07621D330CD5008171E6 /* MyoKit.framework */,
+				BBDC07681D331234008171E6 /* MyoKit.framework */,
 				BBDC07601D330C18008171E6 /* SystemConfiguration.framework */,
 				BBDC075E1D330C0B008171E6 /* CoreBluetooth.framework */,
 				BBDC07481D33084E008171E6 /* MyoReader */,
@@ -69,7 +69,7 @@
 			children = (
 				BBDC07491D33084E008171E6 /* AppDelegate.swift */,
 				BBDC074B1D33084E008171E6 /* ViewController.swift */,
-				BBDC075B1D3309A7008171E6 /* MyoReader-Bridging-Header.h */,
+				BBDC076A1D33133B008171E6 /* MyoKit-Bridging-Header.h */,
 				BBDC074D1D33084E008171E6 /* Main.storyboard */,
 				BBDC07501D33084E008171E6 /* Assets.xcassets */,
 				BBDC07521D33084E008171E6 /* LaunchScreen.storyboard */,
@@ -264,11 +264,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyoReader",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = MyoReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.samuelhastings.MyoReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyoReader/MyoKit-Bridging-Header.h";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "MyoReader/MyoKit-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -279,11 +282,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyoReader",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = MyoReader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.samuelhastings.MyoReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyoReader/MyoKit-Bridging-Header.h";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "MyoReader/MyoKit-Bridging-Header.h";
 			};
 			name = Release;
 		};
