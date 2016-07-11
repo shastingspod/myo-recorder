@@ -15,6 +15,7 @@
 		BBDC075F1D330C0B008171E6 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDC075E1D330C0B008171E6 /* CoreBluetooth.framework */; };
 		BBDC07611D330C18008171E6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDC07601D330C18008171E6 /* SystemConfiguration.framework */; };
 		BBDC07691D331234008171E6 /* MyoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDC07681D331234008171E6 /* MyoKit.framework */; };
+		BBDC076C1D335000008171E6 /* MyoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDC076B1D335000008171E6 /* MyoTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		BBDC07601D330C18008171E6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BBDC07681D331234008171E6 /* MyoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MyoKit.framework; sourceTree = "<group>"; };
 		BBDC076A1D33133B008171E6 /* MyoKit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyoKit-Bridging-Header.h"; sourceTree = "<group>"; };
+		BBDC076B1D335000008171E6 /* MyoTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyoTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 			children = (
 				BBDC07491D33084E008171E6 /* AppDelegate.swift */,
 				BBDC074B1D33084E008171E6 /* ViewController.swift */,
+				BBDC076B1D335000008171E6 /* MyoTest.swift */,
 				BBDC076A1D33133B008171E6 /* MyoKit-Bridging-Header.h */,
 				BBDC074D1D33084E008171E6 /* Main.storyboard */,
 				BBDC07501D33084E008171E6 /* Assets.xcassets */,
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBDC076C1D335000008171E6 /* MyoTest.swift in Sources */,
 				BBDC074C1D33084E008171E6 /* ViewController.swift in Sources */,
 				BBDC074A1D33084E008171E6 /* AppDelegate.swift in Sources */,
 			);
